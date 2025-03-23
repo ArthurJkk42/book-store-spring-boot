@@ -4,24 +4,22 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "tb_cart_items")
+@Table(name = "tb_wishlist_items")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Cart_Items {
+public class WishlistItems {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "cart_id", nullable = false)
-    private Cart cart;
+    @JoinColumn(name = "wishlist_id", nullable = false)
+    private Wishlist wishlist;
 
     @ManyToOne
     @JoinColumn(name = "book_id", nullable = false)
     private Book book;
-
-    private int quantity;
 }
 

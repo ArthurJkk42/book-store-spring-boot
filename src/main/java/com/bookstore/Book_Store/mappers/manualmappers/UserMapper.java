@@ -1,4 +1,4 @@
-package com.bookstore.Book_Store.mappers;
+package com.bookstore.Book_Store.mappers.manualmappers;
 
 import com.bookstore.Book_Store.models.dtos.createdtos.CreateUsersDto;
 import com.bookstore.Book_Store.models.dtos.responsedtos.UsersResponseDto;

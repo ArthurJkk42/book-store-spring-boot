@@ -9,7 +9,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Book_Store {
+public class BookStore {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
