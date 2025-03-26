@@ -10,10 +10,12 @@ import com.bookstore.Book_Store.models.entities.Book;
 import com.bookstore.Book_Store.repository.AuthorRepository;
 import com.bookstore.Book_Store.repository.BookRepository;
 import com.bookstore.Book_Store.services.interfaces.BookService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class BookServiceImpl implements BookService {
 
     @Autowired
@@ -22,12 +24,6 @@ public class BookServiceImpl implements BookService {
     private final AuthorRepository authorRepository;
     @Autowired
     private final BookMapper bookMapper;
-
-    public BookServiceImpl(BookRepository bookRepository, AuthorRepository authorRepository, BookMapper bookMapper) {
-        this.bookRepository = bookRepository;
-        this.authorRepository = authorRepository;
-        this.bookMapper = bookMapper;
-    }
 
     @Override
     public BookResponseDto create(CreateBookDto dto) {
