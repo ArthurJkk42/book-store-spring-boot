@@ -4,15 +4,18 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 public class CreateOrderDto {
+
     @NotNull
     private Long userId;
 
     @NotNull
     private BigDecimal totalPrice;
-
-    private Long discountId; //Optional, but decided to keep it
+    private Long discountId; // using ID, not code
+    private List<CreateOrderItemsDto> items;
 }
+
 
